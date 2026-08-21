@@ -14,7 +14,7 @@ Respond ONLY with a JSON object matching this schema:
 {json.dumps(RISK_SCHEMA, indent=2)}
 """
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         response_format={"type": "json_object"},
     )
