@@ -30,3 +30,5 @@ Every response is validated against this JSON schema:
 
 1. Get a free API key from [console.groq.com](https://console.groq.com)
 2. Set it as an environment variable:
+3. Install dependencies:
+EOFEOFEOFvv
