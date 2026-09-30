@@ -1,9 +1,12 @@
 import json
 import os
-from groq import Groq
+from openai import OpenAI
 from schema import RISK_SCHEMA
 
-client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ.get("OPENROUTER_API_KEY"),
+)
 
 def evaluate_address(address: str, pincode: str = "") -> dict:
     prompt = f"""You are a fraud-risk agent for a cash-on-delivery (COD) e-commerce order.
